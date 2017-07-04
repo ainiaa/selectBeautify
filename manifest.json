@@ -1,0 +1,25 @@
+{
+	"manifest_version":2,
+	"name":"IMAGECO RDM Selector Beautify",
+	"description":"IMAGECO RDM Selector Beautify. author Jeff Liu<jeff.liu.guo@gmail.com>",
+	"version":"1.3",
+	"icons": {
+        "16": "images/icon16.png",
+		"24": "images/icon24.png",
+		"32": "images/icon32.png",
+        "48": "images/icon32.png"
+    },
+	"content_scripts":[
+		{
+			"js":[
+				"js/jquery-2.2.0.min.js",
+				"js/convert2pinyin.js",
+				"js/rdm-modifier.js",
+				"js/selector-beautify.js"
+			],
+			"run_at":"document_end",
+			"matches":["*://*/*"]
+		}
+	],
+	"permissions": ["http://*/*", "https://*/*", "notifications" ]
+}
